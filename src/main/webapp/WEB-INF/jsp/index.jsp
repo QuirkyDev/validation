@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
     <title>Index Page</title>
@@ -8,12 +8,12 @@
         Index Page
     </h1>
     <p>
-        <a href="/form">
+        <a href="form">
             Form Page
         </a>
     </p>
     <p>
-        <a href="/overview">
+        <a href="overview">
             Overview
         </a>
     </p>

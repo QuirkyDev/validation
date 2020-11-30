@@ -1,6 +1,6 @@
-<%@ page import="be.thomasmore.graduaten.voorbeeld.validation.entity.Gebruiker" %>
+<%@ page import="be.thomasmore.graduaten.voorbeeld.validation.model.Gebruiker" %>
 <%@ page import="java.util.List" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
     <title>Overview Page</title>

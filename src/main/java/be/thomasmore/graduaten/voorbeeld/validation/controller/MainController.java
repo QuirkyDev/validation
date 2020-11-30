@@ -1,6 +1,6 @@
 package be.thomasmore.graduaten.voorbeeld.validation.controller;
 
-import be.thomasmore.graduaten.voorbeeld.validation.entity.Gebruiker;
+import be.thomasmore.graduaten.voorbeeld.validation.model.Gebruiker;
 import be.thomasmore.graduaten.voorbeeld.validation.service.GebruikerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

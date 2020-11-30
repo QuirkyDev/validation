@@ -1,4 +1,4 @@
-package be.thomasmore.graduaten.voorbeeld.validation.entity;
+package be.thomasmore.graduaten.voorbeeld.validation.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

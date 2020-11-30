@@ -1,6 +1,6 @@
-<%@ page import="be.thomasmore.graduaten.voorbeeld.validation.entity.Gebruiker" %>
+<%@ page import="be.thomasmore.graduaten.voorbeeld.validation.model.Gebruiker" %>
 <%@ page import="java.util.HashMap" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
     <title>Form Page</title>
@@ -13,7 +13,7 @@
         HashMap<String, String> values = (HashMap<String, String>) request.getAttribute("values");
         HashMap<String, String> errors = (HashMap<String, String>) request.getAttribute("errors");
     %>
-    <form action="/process-form" method="post">
+    <form action="process-form" method="post">
         <p>
             <label for="<%=Gebruiker.VOORNAAM%>"><%=Gebruiker.VOORNAAM%></label>
             <input type="text" id="<%=Gebruiker.VOORNAAM%>" name="<%=Gebruiker.VOORNAAM%>" value="<%=values.get(Gebruiker.VOORNAAM)%>">

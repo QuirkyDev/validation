@@ -1,6 +1,6 @@
 package be.thomasmore.graduaten.voorbeeld.validation.service;
 
-import be.thomasmore.graduaten.voorbeeld.validation.entity.Gebruiker;
+import be.thomasmore.graduaten.voorbeeld.validation.model.Gebruiker;
 
 import java.util.List;
 
