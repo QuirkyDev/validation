@@ -1,5 +1,5 @@
 <%@ page import="be.thomasmore.graduaten.voorbeeld.validation.model.Gebruiker" %>
-<%@ page import="java.util.HashMap" %>
+<%@ page import="be.thomasmore.graduaten.voorbeeld.validation.model.GebruikerError" %>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
@@ -10,34 +10,34 @@
         Form Page
     </h1>
     <%
-        HashMap<String, String> values = (HashMap<String, String>) request.getAttribute("values");
-        HashMap<String, String> errors = (HashMap<String, String>) request.getAttribute("errors");
+        Gebruiker gebruiker = (Gebruiker) request.getAttribute(Gebruiker.NAME);
+        GebruikerError gebruikerError = (GebruikerError) request.getAttribute(GebruikerError.NAME);
     %>
     <form action="process-form" method="post">
         <p>
             <label for="<%=Gebruiker.VOORNAAM%>"><%=Gebruiker.VOORNAAM%></label>
-            <input type="text" id="<%=Gebruiker.VOORNAAM%>" name="<%=Gebruiker.VOORNAAM%>" value="<%=values.get(Gebruiker.VOORNAAM)%>">
+            <input type="text" id="<%=Gebruiker.VOORNAAM%>" name="<%=Gebruiker.VOORNAAM%>" value="<%=gebruiker.getVoornaam()%>">
             <%
-                if (errors.containsKey(Gebruiker.VOORNAAM)) {
-                    out.print("<span style='color: red;'>" + errors.get(Gebruiker.VOORNAAM) + "</span>");
+                if (gebruikerError.voornaam != null) {
+                    out.print("<span style='color: red;'>" + gebruikerError.voornaam + "</span>");
                 }
             %>
         </p>
         <p>
             <label for="<%=Gebruiker.FAMILIENAAM%>"><%=Gebruiker.FAMILIENAAM%></label>
-            <input type="text" id="<%=Gebruiker.FAMILIENAAM%>" name="<%=Gebruiker.FAMILIENAAM%>" value="<%=values.get(Gebruiker.FAMILIENAAM)%>">
+            <input type="text" id="<%=Gebruiker.FAMILIENAAM%>" name="<%=Gebruiker.FAMILIENAAM%>" value="<%=gebruiker.getFamilienaam()%>">
             <%
-                if (errors.containsKey(Gebruiker.FAMILIENAAM)) {
-                    out.print("<span style='color: red;'>" + errors.get(Gebruiker.FAMILIENAAM) + "</span>");
+                if (gebruikerError.familienaam != null) {
+                    out.print("<span style='color: red;'>" + gebruikerError.familienaam + "</span>");
                 }
             %>
         </p>
         <p>
             <label for="<%=Gebruiker.EMAIL%>"><%=Gebruiker.EMAIL%></label>
-            <input type="text" id="<%=Gebruiker.EMAIL%>" name="<%=Gebruiker.EMAIL%>" value="<%=values.get(Gebruiker.EMAIL)%>">
+            <input type="text" id="<%=Gebruiker.EMAIL%>" name="<%=Gebruiker.EMAIL%>" value="<%=gebruiker.getEmail()%>">
             <%
-                if (errors.containsKey(Gebruiker.EMAIL)) {
-                    out.print("<span style='color: red;'>" + errors.get(Gebruiker.EMAIL) + "</span>");
+                if (gebruikerError.email != null) {
+                    out.print("<span style='color: red;'>" + gebruikerError.email + "</span>");
                 }
             %>
         </p>

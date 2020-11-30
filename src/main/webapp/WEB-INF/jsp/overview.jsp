@@ -28,5 +28,11 @@
             %>
         </tr>
     </table>
+    <p>
+        <a href="/">
+            Terug
+        </a>
+         naar index
+    </p>
 </body>
 </html>

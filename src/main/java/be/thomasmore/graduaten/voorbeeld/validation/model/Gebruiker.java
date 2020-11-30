@@ -8,6 +8,7 @@ import javax.persistence.Id;
 @Entity
 public class Gebruiker {
 
+    public static final String NAME = "gebruiker";
     public static final String VOORNAAM = "Voornaam";
     public static final String FAMILIENAAM = "Familienaam";
     public static final String EMAIL = "Email";
@@ -20,6 +21,9 @@ public class Gebruiker {
     private String email;
 
     public Gebruiker() {
+        voornaam = "";
+        familienaam = "";
+        email = "";
     }
 
     public Gebruiker(String voornaam, String familienaam, String email) {
